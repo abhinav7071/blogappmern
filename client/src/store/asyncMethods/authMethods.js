@@ -15,7 +15,7 @@ export const postRegister = (state) => {
         /***Call dispatch and set true request send karne k phle lodaing ko true,resposne aane kk bad loading ko false set kar denge***/
         dispatch({type:SET_LOADER});
         try{
-            const {data} = await axios.post('http://localhost:5300/register',state,config);
+            const {data} = await axios.post('/register',state,config);
             dispatch({type:CLOSE_LOADER});
             //console.log(response);
              /****set token in local storage****/
